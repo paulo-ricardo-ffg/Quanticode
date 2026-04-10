@@ -1,0 +1,324 @@
+/* ============================================
+   QUANTICODE - ESTILOS PRINCIPAIS
+   Cores: #0D0D0D, #250f60, #3d45b8, #4d68f2
+   ============================================ */
+
+/* RESET & VARIÁVEIS */
+:root {
+  --preto: #0D0D0D;
+  --roxo: #250f60;
+  --lilas: #3d45b8;
+  --roxo-claro: #4d68f2;
+  --branco: #ffffff;
+  --cinza-texto: #e0e0e0;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--preto);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: transform 0.4s ease;
+  border-bottom: 1px solid rgba(61, 69, 184, 0.3);
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.company-name h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, var(--roxo-claro));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.main-nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--roxo-claro);
+}
+
+/* ============================================
+   HERO COM PARTICLES
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--preto), var(--roxo));
+}
+
+#hero-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 span {
+  background: linear-gradient(135deg, var(--lilas), var(--roxo-claro));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ============================================
+   BOTÕES - Sobrescrita Bootstrap
+   ============================================ */
+.btn-primary {
+  background: linear-gradient(135deg, var(--roxo-claro), var(--lilas)) !important;
+  border: none !important;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 20px rgba(77, 104, 242, 0.3) !important;
+  background: linear-gradient(135deg, var(--lilas), var(--roxo-claro)) !important;
+}
+
+.btn-outline-light {
+  border: 2px solid var(--roxo-claro) !important;
+  color: white !important;
+}
+
+.btn-outline-light:hover {
+  background: var(--roxo-claro) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* ============================================
+   SERVIÇOS (CARDS)
+   ============================================ */
+.servicos {
+  background: var(--preto);
+  position: relative;
+  z-index: 2;
+}
+
+.section-title h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--lilas), var(--roxo-claro));
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.servico-card {
+  background: rgba(37, 15, 96, 0.3);
+  backdrop-filter: blur(4px);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(61, 69, 184, 0.4);
+  transition: all 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--roxo-claro);
+  box-shadow: 0 20px 35px -10px rgba(77, 104, 242, 0.3);
+}
+
+.servico-img {
+  background: linear-gradient(135deg, var(--roxo), #1a0a3a);
+}
+
+.servico-content h3 {
+  color: var(--roxo-claro);
+}
+
+.badge-premium {
+  background: var(--roxo-claro);
+}
+
+/* ============================================
+   NOSSA EQUIPE
+   ============================================ */
+.nossa-equipe-section {
+  position: relative;
+  background: linear-gradient(180deg, #0a0a0a, #0d0d1a);
+  overflow: hidden;
+}
+
+#equipe-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.nossa-equipe-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.team-member {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.team-member:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.team-member:hover .team-member-img {
+  border-color: var(--roxo-claro);
+  box-shadow: 0 0 25px rgba(77, 104, 242, 0.8);
+}
+
+.team-member-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--lilas);
+  box-shadow: 0 10px 25px rgba(77, 104, 242, 0.3);
+  transition: all 0.3s ease;
+}
+
+.team-member h4 {
+  color: var(--roxo-claro);
+}
+
+/* ============================================
+   LOCALIZAÇÃO
+   ============================================ */
+.localizacao {
+  background: var(--preto);
+  position: relative;
+  z-index: 2;
+}
+
+.localizacao-text h2 {
+  color: var(--roxo-claro);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  background: #050505;
+  border-top: 1px solid rgba(61, 69, 184, 0.3);
+}
+
+footer h4 {
+  color: var(--roxo-claro);
+}
+
+footer a {
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--roxo-claro) !important;
+}
+
+.redes a img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s;
+}
+
+.redes a:hover img {
+  transform: scale(1.1);
+  filter: brightness(0) invert(0.6) sepia(1) hue-rotate(200deg);
+}
+
+.copy {
+  border-top: 1px solid #222;
+}
+
+/* ============================================
+   WHATSAPP FLOAT
+   ============================================ */
+.whatsapp-float {
+  background: #25D366;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   RESPONSIVIDADE ADICIONAL (fora do Bootstrap)
+   ============================================ */
+@media (max-width: 576px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .servico-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .team-member-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .team-member h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  
+  .team-member-img {
+    width: 140px;
+    height: 140px;
+  }
+}
